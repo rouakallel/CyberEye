@@ -12,7 +12,7 @@ const port = parseInt(val, 10);
   }
   return false;
 };
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '4200');
 app.set('port', port);
 
 const errorHandler = error => {
