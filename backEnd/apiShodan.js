@@ -1,6 +1,6 @@
-
-const shodanAPIKey = 'um0MmqV6tgHXp1zHWn3OW7oK4oSyOP4p';
-
+require('dotenv').config()
+const shodanAPIKey = process.env.SHODAN_API_KEY;
+console.log(shodanAPIKey)
 async function scanDomain(domain) {
   const response = await fetch(`https://api.shodan.io/shodan/host/search?key=${shodanAPIKey}&query=${domain}`);
   const data = await response.json();

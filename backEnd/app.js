@@ -1,12 +1,14 @@
+require ('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose')
 const request = require('request');
 const Domain = require('./models/domain')
 const app = express();
 
-
-
-mongoose.connect('mongodb+srv://rouakallel93:szYYir2F0Chlw8zm@cybereye.u1uem7h.mongodb.net/CyberEye?authMechanism=SCRAM-SHA-1&authSource=CyberEye',
+const host = process.env.DB_HOST
+const pwd = process.env.DB_PASSWORD
+const login = process.env.DB_USER
+mongoose.connect(`mongodb+srv://${login}:${pwd}@${host}/CyberEye?authMechanism=SCRAM-SHA-1&authSource=CyberEye`,
 { useNewUrlParser: true,
   useUnifiedTopology: true })
 .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -35,13 +37,13 @@ app.post('/nomDomain', (req, res) => {
   if (!nomDomain) {
     return res.status(400).json({ message: 'Le champ nomDomain est manquant.' });
   }
-
+  const apiKey = process.env.VIRUSTOTAL_API_KEY
   const options = {
     method: 'GET',
     url: `https://www.virustotal.com/api/v3/domains/${nomDomain}`,
     headers: {
       accept: 'application/json',
-      'x-apikey': '82380981680cb20ae28904612eecebfc18f837af88969f86ca101060a0fd5c81'
+      'x-apikey': `${apiKey}`
     }
   };
 
