@@ -25,7 +25,7 @@ function Navbar() {
         </li>
         </ul>
         
-        <ul className="navbar-nav me-auto">  
+        <ul className="navbar-nav ms-auto">  
         <li className="nav-item">
           <NavLink className="nav-link" to="/login">Login</NavLink>
         </li>
