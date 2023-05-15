@@ -5,6 +5,8 @@ import {BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import About from './components/About';
 import ShowReport from './components/ShowReport'
 import Contact from "./components/Contact";
+import Footer from './components/Footer';
+import Login from './components/Login';
 function App() {
  
   return (
@@ -17,9 +19,10 @@ function App() {
           <Route path='/virustotal/:domain' element={<ShowReport/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/about' element={<About/>}/>
-         
+          <Route path='/login' element={<Login/>}/>
          
       </Routes>
+      <Footer />
     </Router> 
     </>
   );

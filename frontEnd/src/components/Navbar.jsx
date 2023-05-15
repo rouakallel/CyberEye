@@ -24,10 +24,13 @@ function Navbar() {
           <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
         </ul>
-        <form className="d-flex">
-        <input className="form-control me-sm-2" type="search" placeholder="Search"></input>
-        <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        
+        <ul className="navbar-nav me-auto">  
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/login">Login</NavLink>
+        </li>
+        </ul>
+
         </div>
     </div>
 </nav>
