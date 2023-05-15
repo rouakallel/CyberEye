@@ -24,7 +24,7 @@ function Search() {
    <form onSubmit={submitDomain}>
 
     <div className="form-group has-success">
-    <label className="form-label mt-4 my-2 " >Enter your domain</label>
+    <label className="form-label mt-1 my-2 " >Enter your domain</label>
     <input onChange={domainInput} type="text" value={nomDomain} className="form-control" id="inputDomain"></input>
     </div>
 
