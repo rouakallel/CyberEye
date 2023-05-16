@@ -1,5 +1,3 @@
-import Search from "./components/Search";
-import Navbar from "./components/Navbar";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -13,8 +11,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Layout from "./components/Layout";
-import Pictures from "./components/Pictures";
 import Content from "./components/Content";
+import SignUp from "./components/SignUp";
 function App() {
   return (
     <>
@@ -22,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Content />} />
-
+               
             <Route path="virustotal">
               <Route path=":domain" element={<ShowReport />} />
             </Route>
@@ -33,6 +31,10 @@ function App() {
 
             <Route path="about">
               <Route index element={<About />} />
+            </Route>
+
+            <Route path="signup">
+            <Route index element={<SignUp />} />
             </Route>
 
             <Route path="login">

@@ -3,12 +3,14 @@ import axios from 'axios'
 function Search() {
     
     const [nomDomain,setDomain] = useState("")
+    const [results, setResults] = useState(null);
    
     const submitDomain = async(e) => {
       e.preventDefault()
       try {
        const res = await axios.post('http://localhost:4200/nomDomain', JSON.stringify({nomDomain: nomDomain}), {headers: {'Content-Type': 'application/json'}})
           console.log(res.data)
+          setResults(res.data);
          }
         catch(err) {
           console.log(err)
@@ -21,10 +23,10 @@ function Search() {
       }
   return (
     <>
-   <form onSubmit={submitDomain}>
+   <form onSubmit={submitDomain} className="form-inline">
 
     <div className="form-group has-success">
-    <label className="form-label mt-1 my-2 " >Enter your domain</label>
+    <label className="form-label mt-1 my-2 " >Check your domain</label>
     <input onChange={domainInput} type="text" value={nomDomain} className="form-control" id="inputDomain"></input>
     </div>
 
@@ -32,6 +34,16 @@ function Search() {
 
     </form>
     {nomDomain}
+    
+    {results && (
+      <div>
+        <h3>Les Résultats du Scan de ton domaine :</h3>
+        {/* Affichez les résultats ici */}
+        <pre>{JSON.stringify(results, null, 2)}</pre>
+      </div>
+    )}
+
+
     </>
   )
 }

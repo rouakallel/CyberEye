@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../img/téléchargement.jpeg";
+import logo from "../img/img1.jpg";
 const Pictures = () => {
   return (
     <>
