@@ -2,7 +2,7 @@ require ('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose')
 const request = require('request');
-const Domain = require('./models/domain')
+const Domain = require('./models/domainModel')
 const app = express();
 
 const host = process.env.DB_HOST
@@ -23,6 +23,13 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   next();
 });
+
+/*const domainRoutes = require('./routes/domainRoutes');
+
+
+
+app.use('/api/domain', domainRoutes); */
+
 app.use(express.json());
 
 //const nomDomain = "yahoo.fr"
@@ -62,7 +69,7 @@ app.post('/nomDomain', (req, res) => {
         links: data.data.links
       });
       await domain.save();
-      res.status(201).json({ message: 'Objet enregistré' });
+      res.status(201).json(domain);
     } catch (error) {
       console.error(error);
       res.status(400).json({ message: 'Une erreur s\'est produite lors de l\'enregistrement de l\'objet.' });
