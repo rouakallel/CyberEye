@@ -43,7 +43,8 @@ const attributesSchema = new mongoose.Schema({
   reputation: { type: Number },
   last_analysis_results: {
     Bkav: lastAnalysisResultSchema,
-    'CMC Threat Intelligence': lastAnalysisResultSchema
+    'CMC Threat Intelligence': lastAnalysisResultSchema,
+    'Kaspersky': lastAnalysisResultSchema
   },
   tld: { type: String },
   last_modification_date: { type: Number },

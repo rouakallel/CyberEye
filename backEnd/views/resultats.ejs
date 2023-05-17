@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Informations sur le domaine</title>
+  </head>
+  <body>
+    <h1>Informations sur le domaine</h1>
+    
+    <h2>Nom du domaine</h2>
+    <p><%= data.name %></p>
+    
+    <h2>Attributs</h2>
+    <ul>
+      <% data.attributes.last_dns_records.forEach(record => { %>
+        <li>
+          <h3>Enregistrement DNS</h3>
+          <p>Rname: <%= record.rname %></p>
+          <p>Retry: <%= record.retry %></p>
+          <p>Value: <%= record.value %></p>
+          <p>Minimum: <%= record.minimum %></p>
+          <p>Refresh: <%= record.refresh %></p>
+          <p>Expire: <%= record.expire %></p>
+          <p>TTL: <%= record.ttl %></p>
+          <p>Serial: <%= record.serial %></p>
+          <p>Type: <%= record.type %></p>
+        </li>
+      <% }); %>
+    </ul>
+
+    <h2>Rangs de popularité</h2>
+    <% Object.entries(data.attributes.popularity_ranks).forEach(([source, rank]) => { %>
+      <h3><%= source %></h3>
+      <p>Timestamp: <%= rank.timestamp %></p>
+      <p>Rank: <%= rank.rank %></p>
+    <% }); %>
+
+    <h2>Résultats d'analyse récents</h2>
+    <% Object.entries(data.attributes.last_analysis_results).forEach(([engine, result]) => { %>
+      <h3><%= engine %></h3>
+      <p>Catégorie: <%= result.category %></p>
+      <p>Résultat: <%= result.result %></p>
+      <p>Méthode: <%= result.method %></p>
+      <p>Nom du moteur: <%= result.engine_name %></p>
+    <% }); %>
+  </body>
+</html>

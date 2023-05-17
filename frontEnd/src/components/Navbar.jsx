@@ -1,5 +1,8 @@
 import { NavLink , Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserLock } from '@fortawesome/free-solid-svg-icons'; 
 
+<script src="https://kit.fontawesome.com/4e855cac99.js" crossorigin="anonymous"></script>
 function Navbar() {
   return (
     <>
@@ -27,7 +30,8 @@ function Navbar() {
         
         <ul className="navbar-nav ms-auto">  
         <li className="nav-item">
-          <NavLink className="nav-link" to="/login"> <span class="glyphicon glyphicon-log-in"></span>Login</NavLink>
+         
+          <NavLink className="nav-link" to="/login">  <span> <FontAwesomeIcon icon={faUserLock}/></span> Login</NavLink>
         </li>
         </ul>
 

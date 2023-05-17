@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const SHODAN_API_KEY = process.env.SHODAN_API_KEY; // Remplacez par votre clé d'API Shodan
 
-const getDomainInfo = async (domain) => {
+const getDomainInfos = async (domain) => {
   try {
     const response = await axios.get(`https://api.shodan.io/shodan/host/${domain}`, {
       params: {
@@ -18,5 +18,5 @@ const getDomainInfo = async (domain) => {
 };
 
 module.exports = {
-  getDomainInfo,
+  getDomainInfos,
 };

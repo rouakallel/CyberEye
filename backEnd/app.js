@@ -1,9 +1,12 @@
 require ('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose')
 const request = require('request');
 const Domain = require('./models/domainModel')
 const app = express();
+const domainRoutes = require('./routes/domainRoutes')
+const path = require('path');
 
 const host = process.env.DB_HOST
 const pwd = process.env.DB_PASSWORD
@@ -24,26 +27,25 @@ app.use((req, res, next) => {
   next();
 });
 
-/*const domainRoutes = require('./routes/domainRoutes');
-
-
-
-app.use('/api/domain', domainRoutes); */
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.json());
 
-//const nomDomain = "yahoo.fr"
-
-let nomDomain ;
 
 
+app.use('/domainRoutes',domainRoutes)
 
 
-app.post('/nomDomain', (req, res) => {
+app.post('/nomDomain', async(req, res) => {
   const nomDomain = req.body.nomDomain;
   if (!nomDomain) {
     return res.status(400).json({ message: 'Le champ nomDomain est manquant.' });
   }
+  const existingDomain = await Domain.findOne({ name: nomDomain });
+    if (existingDomain) {
+      return res.status(200).json(existingDomain.toJSON());
+    }
   const apiKey = process.env.VIRUSTOTAL_API_KEY
   const options = {
     method: 'GET',
@@ -76,5 +78,6 @@ app.post('/nomDomain', (req, res) => {
     }
   });
 });
+
 
 module.exports = app; 

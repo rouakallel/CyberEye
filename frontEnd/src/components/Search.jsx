@@ -1,5 +1,7 @@
 import { useState } from "react"
 import axios from 'axios'
+import renderData from './DataRenderer';
+
 function Search() {
     
     const [nomDomain,setDomain] = useState("")
@@ -39,7 +41,10 @@ function Search() {
       <div>
         <h3>Les Résultats du Scan de ton domaine :</h3>
         {/* Affichez les résultats ici */}
-        <pre>{JSON.stringify(results, null, 2)}</pre>
+        <div>
+        {results && renderData(results)}
+        </div>
+      { /* <pre>{JSON.stringify(results, null, 2)}</pre>*/} 
       </div>
     )}
 

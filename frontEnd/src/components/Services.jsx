@@ -3,9 +3,6 @@
 const Services = () => {
   return (
     <>
-    <figure class="text-start">
-   
-  </figure>
   
 
 </>
