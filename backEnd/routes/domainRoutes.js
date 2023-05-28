@@ -1,8 +1,8 @@
-const express = require('express')
-const router = express.Router();
+const express = require('express');
 const domainController = require('../controllers/domainController');
 
-// Route pour vérifier le domaine dans la base de données
-router.get('/', domainController.checkDomain);
+const router = express.Router();
+
+router.post('/nomDomain', domainController.checkDomain);
 
 module.exports = router;

@@ -1,24 +1,27 @@
+const request = require('request');
 
-const axios = require('axios').default;
+const getDomainInfo = (domain) => {
+  return new Promise((resolve, reject) => {
+    const apiKey = process.env.VIRUSTOTAL_API_KEY;
+    const options = {
+      method: 'GET',
+      url: `https://www.virustotal.com/api/v3/domains/${domain}`,
+      headers: {
+        accept: 'application/json',
+        'x-apikey': `${apiKey}`
+      }
+    };
 
-const VIRUSTOTAL_API_KEY = process.env.VIRUSTOTAL_API_KEY; 
-
-const getDomainInfo = async (domain) => {
-  try {
-    const response = await axios.get(`https://www.virustotal.com/vtapi/v2/domain/report`, {
-      params: {
-        domain: domain,
-        apikey: VIRUSTOTAL_API_KEY,
-      },
+    request(options, function (error, response, body) {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(JSON.parse(body));
+      }
     });
-
-    return response.data; // Vous pouvez traiter et formater les données de la réponse selon vos besoins
-  } catch (error) {
-    console.error('Erreur lors de la récupération des informations de domaine depuis VirusTotal:', error);
-    throw new Error('Une erreur est survenue lors de la récupération des informations de domaine depuis VirusTotal');
-  }
+  });
 };
 
 module.exports = {
-  getDomainInfo,
+  getDomainInfo
 };

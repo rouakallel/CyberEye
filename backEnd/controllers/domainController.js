@@ -1,35 +1,34 @@
-const domainModel = require('../models/domainModel');
+const Domain = require('../models/domainModel');
 const VirusTotalService = require('../services/VirusTotalService');
-// Importez d'autres services nécessaires pour les autres APIs externes
 
 const checkDomain = async (req, res) => {
   try {
-    const { domain } = req.body;
+    const { nomDomain } = req.body;
+    if (!nomDomain) {
+      return res.status(400).json({ message: 'Le champ nomDomain est manquant.' });
+    }
 
-    // Vérifiez le domaine dans la base de données JSON
-    const existingDomain = await domainModel.findOne(domain);
+    const existingDomain = await Domain.findOne({ name: nomDomain });
     if (existingDomain) {
       return res.status(200).json(existingDomain.toJSON());
     }
-   // const result = domainModel.checkDomain(domain);
 
-   /* if (result) {
-      // Le domaine existe dans la base de données
-      res.json({ message: 'Le domaine existe dans la base de données', result });
-    } */ else {
-      // Le domaine n'existe pas dans la base de données, faites appel à l'API externe
-      const virusTotalResult = await VirusTotalService.getDomainInfo(domain);
-      // Effectuez d'autres appels à d'autres APIs externes si nécessaire
-
-      // Renvoyez les résultats de l'API externe
-      res.json({ message: 'Résultats de l\'API externe', result:  virusTotalResult  });
-    }
+    const virusTotalResult = await VirusTotalService.getDomainInfo(nomDomain);
+    const domain = new Domain({
+      name: virusTotalResult.data.name,
+      attributes: virusTotalResult.data.attributes,
+      type: virusTotalResult.data.type,
+      id: virusTotalResult.data.id,
+      links: virusTotalResult.data.links
+    });
+    await domain.save();
+    res.status(201).json(domain);
   } catch (error) {
-    console.error('Erreur lors de la vérification du domaine :', error);
-    res.status(500).json({ error: 'Une erreur est survenue lors de la vérification du domaine' });
+    console.error(error);
+    res.status(500).json({ message: 'Une erreur s\'est produite lors de la vérification du domaine.' });
   }
 };
 
 module.exports = {
-  checkDomain,
+  checkDomain
 };

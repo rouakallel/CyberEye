@@ -13,6 +13,9 @@ import Login from "./components/Login";
 import Layout from "./components/Layout";
 import Content from "./components/Content";
 import SignUp from "./components/SignUp";
+import ScanDomain from "./components/ScanDomain";
+import ScanEmail from "./components/ScanEmail";
+import ScanServiceExpo from "./components/ScanServiceExpo";
 function App() {
   return (
     <>
@@ -35,6 +38,18 @@ function App() {
 
             <Route path="signup">
             <Route index element={<SignUp />} />
+            </Route>
+
+            <Route path="detectionUsurpation">
+            <Route index element={<ScanDomain />} />
+            </Route>
+
+            <Route path="detectionFuiteDonnées">
+            <Route index element={<ScanEmail />} />
+            </Route>
+
+            <Route path="detectionServicesExposés">
+            <Route index element={<ScanServiceExpo />} />
             </Route>
 
             <Route path="login">

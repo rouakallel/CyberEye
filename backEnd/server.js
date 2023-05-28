@@ -1,5 +1,6 @@
 const http = require('http');
-const app = require('./app');
+const app3 = require('./app');
+
 
 const normalizePort = val => {
 const port = parseInt(val, 10);
@@ -13,7 +14,7 @@ const port = parseInt(val, 10);
   return false;
 };
 const port = normalizePort(process.env.PORT || '4200');
-app.set('port', port);
+app3.set('port', port);
 
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
@@ -35,7 +36,7 @@ const errorHandler = error => {
   }
 };
 
-const server = http.createServer(app);
+const server = http.createServer(app3);
 
 server.on('error', errorHandler);
 server.on('listening', () => {

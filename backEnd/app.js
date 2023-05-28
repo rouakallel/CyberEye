@@ -1,5 +1,5 @@
 require ('dotenv').config();
-
+require('./config/connect')
 const express = require('express');
 const mongoose = require('mongoose')
 const request = require('request');
@@ -18,8 +18,6 @@ mongoose.connect(`mongodb+srv://${login}:${pwd}@${host}/CyberEye?authMechanism=S
 .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 
-
-
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
@@ -33,8 +31,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
 
 
-
-app.use('/domainRoutes',domainRoutes)
 
 
 app.post('/nomDomain', async(req, res) => {

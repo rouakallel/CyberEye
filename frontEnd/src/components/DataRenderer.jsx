@@ -18,7 +18,7 @@
     return (
       <ul>
         {Object.entries(lastAnalysisResults).map(([engine, result], index) => (
-          <li key={index}>
+          <li key={index}> 
             <strong>Engine:</strong> {engine}<br />
             <strong>Category:</strong> {result.category}<br />
             <strong>Result:</strong> {result.result}<br />
@@ -32,23 +32,92 @@
   
   const renderData = (data) => {
     return (
-      <div>
-        <h3>Data:</h3>
-        <strong className="">Name:</strong> {data.name}<br />
-        <strong>Type:</strong> {data.type}<br />
-        <strong>ID:</strong> {data.id}<br />
-       { /*<strong>Self Link:</strong> {data.links.self}<br />*/}
-        <br />
-        <h3>Attributes:</h3>
-        <strong>Popularity Ranks:</strong> {renderPopularityRanks(data.attributes.popularity_ranks)}<br />
-        <strong>Last Analysis Stats:</strong> {JSON.stringify(data.attributes.last_analysis_stats)}<br />
-        <strong>Reputation:</strong> {data.attributes.reputation}<br />
-        <strong>Last Analysis Results:</strong> {renderLastAnalysisResults(data.attributes.last_analysis_results)}<br />
-        <strong>TLD:</strong> {data.attributes.tld}<br />
-        <strong>Last Modification Date:</strong> {data.attributes.last_modification_date}<br />
-        <strong>Categories:</strong> {JSON.stringify(data.attributes.categories)}<br />
-        <strong>Total Votes:</strong> {JSON.stringify(data.attributes.total_votes)}<br />
-      </div>
+      <>
+      <table className="table table-hover table-font">
+  <tbody>
+
+    <tr>
+      <th className="table-light" >Name:</th>
+      <td>{data.name}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Type:</th>
+      <td>{data.type}</td>
+    </tr>
+    <tr>
+      <th className="table-light">ID:</th>
+      <td>{data.id}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Attributes:</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th className="table-light">Popularity Ranks:</th>
+      <td>{renderPopularityRanks(data.attributes.popularity_ranks)}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Last Analysis Stats:</th>
+      <td>
+        <table>
+          <thead>
+            <tr>
+              <th className="table-light">Type</th>
+              <th className="table-light">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>harmless</td>
+              <td>{data.attributes.last_analysis_stats.harmless}</td>
+            </tr>
+            <tr>
+              <td>malicious</td>
+              <td>{data.attributes.last_analysis_stats.malicious}</td>
+            </tr>
+            <tr>
+              <td>suspicious</td>
+              <td>{data.attributes.last_analysis_stats.suspicious}</td>
+            </tr>
+            <tr>
+              <td>undetected</td>
+              <td>{data.attributes.last_analysis_stats.undetected}</td>
+            </tr>
+            <tr>
+              <td>timeout</td>
+              <td>{data.attributes.last_analysis_stats.timeout}</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th className="table-light">Reputation:</th>
+      <td>{data.attributes.reputation}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Last Analysis Results:</th>
+      <td>{renderLastAnalysisResults(data.attributes.last_analysis_results)}</td>
+    </tr>
+    <tr>
+      <th className="table-light">TLD:</th>
+      <td>{data.attributes.tld}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Last Modification Date:</th>
+      <td>{data.attributes.last_modification_date}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Categories:</th>
+      <td>{JSON.stringify(data.attributes.categories)}</td>
+    </tr>
+    <tr>
+      <th className="table-light">Total Votes:</th>
+      <td>{JSON.stringify(data.attributes.total_votes)}</td>
+    </tr>
+  </tbody>
+</table>
+      </>
     );
   };
   export default renderData
