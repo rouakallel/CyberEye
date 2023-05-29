@@ -19,22 +19,34 @@ const checkHost = async (req, res) => {
         console.log(shodanResult);
 
         const host = new hostModel({
-          region_code: shodanResult.region_code,
-          area_code: shodanResult.area_code,
+          regionCode: shodanResult.region_code,
+          areaCode: shodanResult.area_code,
           domains: shodanResult.domains,
           hostnames: shodanResult.hostnames,
-          country_code: shodanResult.country_code,
+          countryCode: shodanResult.country_code,
           org: shodanResult.org,
+          data: shodanResult.data,
           asn: shodanResult.asn,
           city: shodanResult.city,
-          country_name: shodanResult.country_name,
+          latitude: shodanResult.latitude,
+          isp: shodanResult.isp,
+          longitude: shodanResult.longitude,
+          lastUpdate: shodanResult.last_update,
+          countryName: shodanResult.country_name,
           ip_str: shodanResult.ip_str,
           os: shodanResult.os,
           ports: shodanResult.ports
         });
-
-        await host.save();
-        return host;
+         
+        
+        host.save()
+        .then(savedHost => {
+          console.log('Host saved:', savedHost);
+        })
+        .catch(error => {
+          console.error('Error saving host:', error);
+        });
+        return host 
       } catch (error) {
         console.error(error);
         throw error;
