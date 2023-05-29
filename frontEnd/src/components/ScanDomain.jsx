@@ -10,7 +10,7 @@ const ScanDomain =() => {
     const submitDomain = async(e) => {
       e.preventDefault()
       try {
-       const res = await axios.post('http://localhost:4200/nomDomain', JSON.stringify({nomDomain: nomDomain}), {headers: {'Content-Type': 'application/json'}})
+       const res = await axios.post('http://localhost:4200/nomDomain', JSON.stringify({name: nomDomain}), {headers: {'Content-Type': 'application/json'}})
           console.log(res.data)
           setResults(res.data);
          }

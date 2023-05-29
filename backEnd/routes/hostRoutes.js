@@ -3,6 +3,6 @@ const hostController = require('../controllers/hostController');
 
 const router = express.Router();
 
-router.post('/host', hostController.checkHost);
+router.post('/', hostController.checkHost);
 
 module.exports = router ;

@@ -1,22 +1,18 @@
 const axios = require('axios');
-
-const SHODAN_API_KEY = process.env.SHODAN_API_KEY; 
+const util = require('util');
 
 const scanHost = async (adresseIP) => {
   try {
-    const response = await axios.get(`https://api.shodan.io/shodan/host/${adresseIP}`, {
-      params: {
-        key: SHODAN_API_KEY,
-      },
-    });
-
-    return response.data;
+    const apiKey = process.env.SHODAN_API_KEY;
+    const response = await axios.get(`https://api.shodan.io/shodan/host/${adresseIP}?key=${apiKey}`);
+    const data = response.data;
+    console.log("Les données du scan sont", data);
+    return data;
   } catch (error) {
-    console.error('Erreur lors de la récupération des informations de domaine depuis Shodan:', error);
-    throw new Error('Une erreur est survenue lors de la récupération des informations de domaine depuis Shodan');
+    console.error('Erreur lors de la requête à l\'API Shodan:', error.message);
+    throw error;
   }
 };
-
 
 module.exports = {
   scanHost

@@ -3,6 +3,6 @@ const domainController = require('../controllers/domainController');
 
 const router = express.Router();
 
-router.post('/nomDomain', domainController.checkDomain);
+router.post('/', domainController.checkDomain);
 
 module.exports = router;

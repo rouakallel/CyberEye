@@ -3,7 +3,7 @@ const VirusTotalService = require('../services/VirusTotalService');
 
 const checkDomain = async (req, res) => {
   try {
-    const { nomDomain } = req.body;
+    const {name: nomDomain } = req.body;
     if (!nomDomain) {
       return res.status(400).json({ message: 'Le champ nomDomain est manquant.' });
     }
@@ -11,7 +11,7 @@ const checkDomain = async (req, res) => {
     const existingDomain = await Domain.findOne({ name: nomDomain });
     if (existingDomain) {
       return res.status(200).json(existingDomain.toJSON());
-    }
+    } 
 
     const virusTotalResult = await VirusTotalService.getDomainInfo(nomDomain);
     const domain = new Domain({
