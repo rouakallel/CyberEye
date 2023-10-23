@@ -4,13 +4,13 @@ import renderData from './DataRenderer';
 
 const ScanDomain =() => {
     
-    const [nomDomain,setDomain] = useState("")
+    const [name,setDomain] = useState("")
     const [results, setResults] = useState(null);
    
     const submitDomain = async(e) => {
       e.preventDefault()
       try {
-       const res = await axios.post('http://localhost:4200/nomDomain', JSON.stringify({name: nomDomain}), {headers: {'Content-Type': 'application/json'}})
+       const res = await axios.post('http://localhost:4200/nomDomain', JSON.stringify({name: name}), {headers: {'Content-Type': 'application/json'}})
           console.log(res.data)
           setResults(res.data);
          }
@@ -28,7 +28,7 @@ const ScanDomain =() => {
 
     <div className="form-group has-success ">
     <label className="form-label mt-1 my-2 label-domain " >Check Your Domain</label>
-    <input onChange={domainInput} type="text" value={nomDomain} className="form-control input-domain" id="inputDomain"></input>
+    <input onChange={domainInput} type="text" value={name} className="form-control input-domain" id="inputDomain"></input>
     </div>
 
     <button type="submit" className="btn btn-primary my-2 ">Submit</button>

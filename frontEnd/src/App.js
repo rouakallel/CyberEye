@@ -8,7 +8,6 @@ import {
 import About from "./components/About";
 import ShowReport from "./components/ShowReport";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Layout from "./components/Layout";
 import Content from "./components/Content";
@@ -59,7 +58,7 @@ function App() {
             <Route path="*" element={<Navigate to={"/"} replace />} />
           </Route>
         </Routes>
-        <Footer />
+        
       </Router>
     </>
   );

@@ -16,7 +16,7 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     min-height: 100vh;
     background-color: var(--BGCOLOR);
     color: var(--COLOR);
@@ -103,3 +103,39 @@ body::before {
    .img-fixed-height {
     height: 300px;
   }
+  .navcolor {
+    background-color:  #002438;
+  }
+  .custom-navbar {
+    height: 50px; 
+}
+/* Styles pour le tableau */
+.table {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Styles pour les cellules d'en-tête */
+.table th {
+  background-color: #002438;
+  font-weight: bold;
+  text-align: left;
+}
+/* Styles pour les lignes impaires (facultatif) */
+.table tr:nth-child(odd) {
+  background-color: #09293A;
+}
+
+/* Styles pour les listes imbriquées (Ports Ouverts) */
+.table ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}

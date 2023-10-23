@@ -10,7 +10,7 @@ const ScanServiceExpo = () => {
   const submitHost = async(e) => {
     e.preventDefault()
     try {
-     const res = await axios.post('http://localhost:4200/host', JSON.stringify({ip_str: host}), {headers: {'Content-Type': 'application/json'}})
+     const res = await axios.post('http://localhost:4200/host', JSON.stringify({domain: host}), {headers: {'Content-Type': 'application/json'}})
         console.log(res.data)
         setResults(res.data);
        }
@@ -27,7 +27,7 @@ return (
  <form onSubmit={submitHost} className=" form-position">
 
   <div className="form-group has-success ">
-  <label className="form-label mt-1 my-2 label-domain " >Check Your IP adress</label>
+  <label className="form-label mt-1 my-2 label-domain " >Check Your domain</label>
   <input onChange={hostInput} type="text" value={host} className="form-control input-domain " ></input>
   </div>
 
@@ -38,7 +38,7 @@ return (
   
   {results && (
     <div>
-      <h3>Les Résultats du Scan de votre adresse ip :</h3>
+      <h3>Les Résultats du Scan de votre domaine :</h3>
       
       <div>
       {results && renderHost(results)}

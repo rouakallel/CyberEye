@@ -1,28 +1,39 @@
-const Domain = require('../models/domainModel');
 const VirusTotalService = require('../services/VirusTotalService');
+const mongoose = require('mongoose');
+const collection = mongoose.connection.collection('domaindatas');
+
 
 const checkDomain = async (req, res) => {
   try {
-    const {name: nomDomain } = req.body;
-    if (!nomDomain) {
-      return res.status(400).json({ message: 'Le champ nomDomain est manquant.' });
+    const { name } = req.body;
+    if (!name) {
+      console.log(name)
+      return res.status(400).json({ message: 'Le champ name est manquant.' });
     }
 
-    const existingDomain = await Domain.findOne({ name: nomDomain });
-    if (existingDomain) {
-      return res.status(200).json(existingDomain.toJSON());
-    } 
+    // Vérifiez si le domaine existe déjà dans la collection MongoDB
+   const existingDomain = await collection.findOne({ name });
 
-    const virusTotalResult = await VirusTotalService.getDomainInfo(nomDomain);
-    const domain = new Domain({
-      name: virusTotalResult.data.name,
-      attributes: virusTotalResult.data.attributes,
-      type: virusTotalResult.data.type,
-      id: virusTotalResult.data.id,
-      links: virusTotalResult.data.links
-    });
-    await domain.save();
-    res.status(201).json(domain);
+    if (existingDomain) {
+      return res.status(200).json(existingDomain);
+    }
+
+    const virusTotalResult = await VirusTotalService.getDomainInfo(name);
+    
+    if (!virusTotalResult.data) {
+      return res.status(404).json({ message: 'Aucune donnée trouvée pour ce domaine.' });
+    }
+
+    // Stockez les données dans la collection MongoDB
+    const documentToInsert = {
+      name: name, 
+      data: virusTotalResult.data,
+    };
+    
+    // Insérez le document dans la collection
+    await collection.insertOne(documentToInsert);
+
+    res.status(201).json(documentToInsert);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Une erreur s\'est produite lors de la vérification du domaine.' });

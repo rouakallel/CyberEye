@@ -56,13 +56,14 @@ const attributesSchema = new mongoose.Schema({
 });
 
 const dataSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  data:{ 
   attributes: attributesSchema,
   type: { type: String },
   id: { type: String },
   links: {
     self: { type: String }
   }
+}
 });
 
 

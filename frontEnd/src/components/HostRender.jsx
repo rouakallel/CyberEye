@@ -1,26 +1,48 @@
- 
-  const renderHost = (hostData) => {
-    return (
-      <>
-      
-      <ul>
+const renderHost = (hostData) => {
+  return (
+    <table className="table table-bordered">
+      <tbody>
+        <tr>
+          <th>Adresse IP:</th>
+          <td>{hostData.ip_str}</td>
+        </tr>
+        <tr>
+          <th>Région Code:</th>
+          <td>{hostData.regionCode}</td>
+        </tr>
+        <tr>
+          <th>Area Code:</th>
+          <td>{hostData.areaCode}</td>
+        </tr>
+        <tr>
+          <th>Domains:</th>
+          <td>{hostData.domains.join(', ')}</td>
+        </tr>
+        <tr>
+          <th>Hostnames:</th>
+          <td>{hostData.hostnames.join(', ')}</td>
+        </tr>
+        <tr>
+          <th>Country Code:</th>
+          <td>{hostData.countryCode}</td>
+        </tr>
+        <tr>
+          <th>Organization:</th>
+          <td>{hostData.org}</td>
+        </tr>
+        <tr>
+          <th>Ports Ouverts:</th>
+          <td>
+            <ul>
+              {hostData.ports.map((port, index) => (
+                <li key={index}>{port}</li>
+              ))}
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  );
+};
 
-      <li> <strong>Region Code:</strong> {hostData.regionCode}<br /> </li>
-      <li> <strong>Area Code:</strong> {hostData.areaCode}<br /></li>
-      <li> <strong>Domains:</strong> {hostData.domains.join(', ')}<br /></li>
-      <li> <strong>Hostnames:</strong> {hostData.hostnames.join(', ')}<br /></li>
-      <li> <strong>Country Code:</strong> {hostData.countryCode}<br /></li>
-      <li>  <strong>Organization:</strong> {hostData.org}<br /></li>
-      <li>  <strong>Ports Ouverts :</strong> <ul>
-        {hostData.ports.map((port, index) => (
-          <li key={index}>{port}</li>
-        ))}
-      </ul>
-      </li>
-      
-    </ul>
-     
-      </>
-    );
-  };
-  export default renderHost
+export default renderHost;

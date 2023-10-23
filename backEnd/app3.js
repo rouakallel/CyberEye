@@ -2,6 +2,7 @@
 const express = require('express');
 const domainRoutes=require('./routes/domainRoutes')
 const hostRoutes = require('./routes/hostRoutes');
+const emailRoutes = require('./routes/emailRoutes')
 
 const app3 = express();
 
@@ -23,9 +24,8 @@ require('dotenv').config();
 app3.use(express.json());
 
 app3.use('/nomDomain', domainRoutes); 
-
-
 app3.use('/host', hostRoutes);
+app3.use('/adresseEmail',emailRoutes)
 
 // app3.set('view engine', 'ejs');
 // app3.set('views', './views');

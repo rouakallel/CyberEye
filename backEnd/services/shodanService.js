@@ -1,10 +1,23 @@
 const axios = require('axios');
 const util = require('util');
+const dns = require('dns')
 
-const scanHost = async (adresseIP) => {
+const resolveDomainToIP = util.promisify(dns.resolve4)
+
+
+const scanHost = async (domain) => {
   try {
     const apiKey = process.env.SHODAN_API_KEY;
-    const response = await axios.get(`https://api.shodan.io/shodan/host/${adresseIP}?key=${apiKey}`);
+
+    // Résolvez le domaine en une adresse IP
+    const resolvedIPs = await resolveDomainToIP(domain);
+    if (resolvedIPs.length === 0) {
+      throw new Error('Impossible de résoudre le domaine en une adresse IP.');
+    }
+
+    const ipAddress = resolvedIPs[0]; // Utilisez la première adresse IP résolue
+
+    const response = await axios.get(`https://api.shodan.io/shodan/host/${ipAddress}?key=${apiKey}`);
     const data = response.data;
     console.log("Les données du scan sont", data);
     return data;

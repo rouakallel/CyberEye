@@ -1,33 +1,26 @@
-const request = require('request');
+const axios = require('axios');
 
-const util = require('util');
+const getDomainInfo = async (name) => {
+  try {
+    const apiKey = process.env.VIRUSTOTAL_API_KEY;
+    const url = `https://www.virustotal.com/api/v3/domains/${name}`;
+    const headers = {
+      'x-apikey': apiKey
+    };
 
-const getDomainInfo = (nomDomain) => {
-  return async (req, res, error) => {
-    try {
-      const apiKey = process.env.VIRUSTOTAL_API_KEY;
-      const options = {
-        method: 'GET',
-        url: `https://www.virustotal.com/api/v3/domains/${nomDomain}`,
-        headers: {
-          accept: 'application/json',
-          'x-apikey': `${apiKey}`
-        }
-      };
+    const response = await axios.get(url, { headers });
 
-      const requestAsync = util.promisify(request);
-      const response = await requestAsync(options);
-      const data = JSON.parse(response.body);
-      res.send(data);
-      console.log(data)
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
+    if (response.status === 200) {
+      const data = response.data;
+      return data;
+    } else {
+      throw new Error(`VirusTotal API returned status code: ${response.status}`);
     }
-  };
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 };
-
-
 module.exports = {
   getDomainInfo
 };
