@@ -5,7 +5,7 @@ const scanEmail = async (adresseEmail) => {
     const apiKey = process.env.HIBP_API_KEY;
     const response = await axios.get(`https://haveibeenpwned.com/api/v3/breachedaccount/${adresseEmail}`, {
       headers: {
-        'hibp-api-key': apiKey
+        'Hibp-Api-Key': apiKey
       }
     })
     const data = response.data;

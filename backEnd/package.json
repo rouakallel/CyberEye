@@ -7,7 +7,8 @@
     "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd ../frontend && npm start",
-    "dev": "concurrently \" npm run server \"  \" npm run client \" "
+    "flask": " cd ../FlaskServer &&  venv\\Scripts\\flask run",
+    "dev": "concurrently \" npm run server \"  \" npm run client \" \"npm run flask\""
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "nodemon": "^2.0.22",
     "pug": "^3.0.2",
     "request": "^2.88.2",
-    "shodan-client": "^3.2.0"
+    "shodan-client": "^3.2.0",
+    "venv": "^1.0.1"
   }
 }

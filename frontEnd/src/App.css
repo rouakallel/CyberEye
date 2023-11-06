@@ -1,3 +1,8 @@
+@import "~/node_modules/bootswatch/dist/darkly/bootstrap.min.css" ;
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;1,500&family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
+
 .App {
   text-align: center;
 }
@@ -25,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #8bdaf2;
 }
 
 @keyframes App-logo-spin {
@@ -38,7 +43,7 @@
 }
 
 
- @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
+
  
  .pres{
   margin: 60px 0;
@@ -47,6 +52,14 @@
  }
 
  .input-domain{
-  color:antiquewhite;
+  color:rgba(255, 255, 255, 0.888);
  }
- 
+  
+ .albumfont {
+  font-family: 'Josefin Sans', sans-serif;
+ }
+
+ .datafont {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #282c34;
+ }

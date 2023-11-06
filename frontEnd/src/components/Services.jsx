@@ -7,7 +7,7 @@ const Services = () => {
     <div className="album py-5 serviceContainer ">
     <div className="container ">
 
-      <div className="row">
+      <div className="row albumfont ">
         <div className="col-md-4 ">
           <div className="card mb-4 ">
             <div className="card-title "> Detection des données sensibles</div>
@@ -30,9 +30,9 @@ const Services = () => {
         <div className="col-md-4">
           <div className="card mb-4 box-shadow cardhaut">
           <div className="card-title "> Detection des services exposés</div>
-            <img className="card-img-top img-fixed-height" src="../img/standard-quality-control-collage-concept.jpg" alt="DetectionServiceExpo"/>
+            <img className="card-img-top img-fixed-height" src="../img/img3.jpg" alt="DetectionServiceExpo"/>
             <div className="card-body">
-              <p className="card-text"> En surveillant et en protégeant en permanence les services exposés,vous pouvez prévenir les incidents de sécurité, minimiser les impacts négatifs et garantir un environnement en ligne sûr pour vos utilisateurs et vos données.</p>
+              <p className="card-text"> En surveillant en permanence les services exposés,vous pouvez prévenir les incidents de sécurité, minimiser les impacts négatifs et garantir un environnement en ligne sûr pour vos utilisateurs et vos données.</p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
                   <button type="button" className="btn btn-lg btn-primary"><Link to="/detectionServicesExposés" className="link"> Demo</Link></button>
@@ -49,9 +49,9 @@ const Services = () => {
         <div className="col-md-4">
           <div className="card mb-4 box-shadow  cardhaut">
             <div className="card-title "> Detection de l'usurpation de marque</div>
-            <img className="card-img-top img-fixed-height" src="../img/standard-quality-control-collage-concept (1).jpg" alt="DetectionUsurpation"/>
+            <img className="card-img-top img-fixed-height" src="../img/img2.jpg" alt="DetectionUsurpation"/>
             <div className="card-body">
-              <p className="card-text"> En identifiant les tentatives d'usurpation, on peut prendre des mesures proactives pour prévenir les fraudes en ligne,réserver la réputation de la marque,réduire les risques de vol d'identité et protéger la confiance des clients dans votre entreprise</p>
+              <p className="card-text"> En identifiant les tentatives d'usurpation, on peut prendre des mesures proactives pour prévenir les fraudes en ligne,réduire les risques de vol d'identité et protéger la confiance des clients.</p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
                   <button type="button" className="btn btn-lg btn-primary"><Link to="/detectionUsurpation" className="link"> Demo</Link></button>

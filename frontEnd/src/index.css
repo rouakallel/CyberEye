@@ -1,6 +1,6 @@
 @import "~/node_modules/bootswatch/dist/darkly/bootstrap.min.css" ;
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;1,500&family=Inter:wght@400;600;700&display=swap');
 :root {
   /* COLORS */
   --BGCOLOR: #2c3e50;
@@ -16,11 +16,10 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    font-family: 'Josefin Sans', sans-serif;
     min-height: 100vh;
-    background-color: var(--BGCOLOR);
+    background-color: #D1D4D3 ;
     color: var(--COLOR);
-    background-image: url("../public/img/img1.jpg");
+   /* background-image: url("../public/img/img1.jpg");*/
     background-size: cover;
     background-position: top right;
     background-blend-mode: multiply;
@@ -58,7 +57,7 @@ body::before {
   
 
   .label-domain{
-    color: #b7e1e4;
+    color: #21292a;
     font-family: "Nunito", sans-serif;
   }
   .input-domain{
@@ -84,7 +83,7 @@ body::before {
     background-color:#002438;
    }
    .card-text{
-    color: rgba(200, 191, 177, 0.733);
+    color: rgba(217, 213, 207, 0.934);
    }
    .card-title{
     font-size: 21px ;

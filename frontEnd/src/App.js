@@ -15,6 +15,7 @@ import SignUp from "./components/SignUp";
 import ScanDomain from "./components/ScanDomain";
 import ScanEmail from "./components/ScanEmail";
 import ScanServiceExpo from "./components/ScanServiceExpo";
+import SensitiveData from "./components/SensitiveData";
 function App() {
   return (
     <>
@@ -49,6 +50,10 @@ function App() {
 
             <Route path="detectionServicesExposés">
             <Route index element={<ScanServiceExpo />} />
+            </Route>
+
+            <Route path="sensitiveData">
+            <Route index element={<SensitiveData />} />
             </Route>
 
             <Route path="login">

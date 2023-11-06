@@ -1,0 +1,332 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 10:56:28] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 10:56:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 10:56:46] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:05:01] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:05:01] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:05:14] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:05:21] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:05:24] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:05:30] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:07:06] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:07:21] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:07:24] "[31m[1mGET /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:09:37] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:11:02] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:11:02] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:13:06] "[33mGET /main.2f28cbb36d19c7273581.hot-update.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:13:19] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:13:19] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:13:46] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:17:32] "[33mGET /main.0d63d388b26e02f1f257.hot-update.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:17:38] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:17:38] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:17:45] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:17:48] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:18:11] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:18:18] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:18:18] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:18:23] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:22:55] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:22:55] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:23:01] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:24:42] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:12] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:21] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:21] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:29] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:41] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:29:42] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:40:10] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:40:10] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:40:29] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:40:29] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:40:29] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:41:31] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:47:24] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'submit_form' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:47:24] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:47:41] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:55:10] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\app.py", line 14, in submit_form
+    file_types = data.get_json('fileTypes')
+                 ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'get_json'
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:55:10] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:55:41] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:55:44] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:55:49] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:57:52] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 11:57:52] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:57:02] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:57:02] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:58:11] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:58:11] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:59:37] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:59:37] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 12:59:56] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:01:09] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:01:23] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:01:23] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:05:41] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:05:43] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:05:44] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:06:40] "[33mGET /main.dd32041118a8026eab3b.hot-update.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:07:28] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 13:09:13] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:05:30] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:05:30] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:05:59] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:11:56] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:12:03] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:12:03] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:12:10] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:13:11] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:13:17] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:13:17] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:13:20] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:13:33] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:13:35] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:25:29] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:25:29] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:25:51] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:26:08] "[31m[1mPOST /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:26:21] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:26:54] "[31m[1mGET /submit HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:27:03] "[31m[1mPOST /submit HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:27:05] "[31m[1mPOST /submit HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:45:17] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:45:17] "[31m[1mPOST /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:45:55] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:45:55] "[31m[1mPOST /submit HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:55:18] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\app.py", line 15, in submit_form
+    Y=json.loads(data)
+      ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:55:18] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:59:07] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\app.py", line 15, in submit_form
+    Y=json.loads(data)
+      ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 14:59:07] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:00:05] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\app.py", line 15, in submit_form
+    if __name__ == "__main__":
+              ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:00:05] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:00:09] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:02:49] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:05:24] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:05:48] "[31m[1mPOST /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:05:55] "[31m[1mGET /submit HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:09:09] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\app.py", line 12, in submit_form
+    print('This to verify the result',json.loads(data))
+                                      ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 15:09:09] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 19:28:01] "OPTIONS /submit HTTP/1.1" 200 -
+ERROR:app:Exception on /submit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rouak\Desktop\BootCamp\CyberEye\FlaskServer\app.py", line 12, in submit_form
+    print('This to verify the result',json.loads(data))
+                                      ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 19:28:01] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 20:26:59] "OPTIONS /submit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 20:26:59] "POST /submit HTTP/1.1" 200 -
