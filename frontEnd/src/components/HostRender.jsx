@@ -1,3 +1,4 @@
+import React from 'react';
 const renderHost = (hostData) => {
   return (
     <table className="table table-bordered">

@@ -11,17 +11,13 @@ def submit_form():
     data = request.get_json()
     print('This to verify the result',data)
     if data:
-        # Vous pouvez accéder aux données JSON ici
-        file_types = data.get('fileTypes')
-        categories = data.get('categories')
+        categorie = [key for key, value in data['categories'].items() if value]
+        file_type = [key for key, value in data['fileTypes'].items() if value]
 
-        # Effectuez le traitement des données ici, par exemple, renvoyez les données sous forme de réponse JSON
-        response_data = {
-            'fileTypes': file_types,
-            'categories': categories
-        }
+        print("Selected categorie:", categorie)
+        print("Selected file type:", file_type)
     
-        return response_data, 200
+        return categorie, 200
     else:
         return {'error': 'Données JSON manquantes dans la requête.'}, 400
         

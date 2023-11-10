@@ -1,7 +1,8 @@
+import React from 'react';
 import { NavLink , Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserLock } from '@fortawesome/free-solid-svg-icons'; 
-
+// eslint-disable-next-line no-unused-expressions
 <script src="https://kit.fontawesome.com/4e855cac99.js" crossorigin="anonymous"></script>
 function Navbar() {
   return (
