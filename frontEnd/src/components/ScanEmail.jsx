@@ -39,10 +39,10 @@ return (
   
   {results && (
     <div>
-    <h4>Ton mail est il compromis à la suite d'une violation de données :</h4>
-    <div>{results.isLeaked ? 'Oui' : 'Non'}</div>
+    <h4 className='titleh4'>Ton mail est il compromis à la suite d'une violation de données :</h4>
+    <div className='mailcomp'>{results.isLeaked ? 'Oui' : 'Non'}</div>
     {results.isLeaked && (
-      <div>
+      <div className='mailcomp'>
         <DataRendererEmail hibpResult={results.hibpResult} />
       </div>
     )}

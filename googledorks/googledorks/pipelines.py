@@ -8,6 +8,6 @@
 from itemadapter import ItemAdapter
 
 
-class DataleakPipeline:
+class GoogledorksPipeline:
     def process_item(self, item, spider):
         return item

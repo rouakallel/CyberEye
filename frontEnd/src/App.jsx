@@ -41,11 +41,11 @@ function App() {
             <Route index element={<SignUp />} />
             </Route>
 
-            <Route path="detectionUsurpation">
+            <Route path="detectionServiceExpo">
             <Route index element={<ScanDomain />} />
             </Route>
 
-            <Route path="detectionFuiteDonnées">
+            <Route path="detectionMail">
             <Route index element={<ScanEmail />} />
             </Route>
 

@@ -1,118 +1,60 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-function SensitiveData() {
-  const [fileTypes, setFileTypes] = useState({
-    pdf: false,
-    xls: false,
-    txt: false,
-  });
+const ScanSensitiveData = () => {
+  const [keyword1, setKeyword1] = useState("");
+  const [keyword2, setKeyword2] = useState("");
+  const [results, setResults] = useState(null);
 
-  const [categories, setCategories] = useState({
-    auth: false,
-    finance: false,
-    medical: false,
-  });
+  const submitKeywords = async (e) => {
+    e.preventDefault();
 
-  const handleCheckboxChange = (event, group, setGroup) => {
-    const { name, checked } = event.target;
-
-    setGroup((prevGroup) => ({
-      ...prevGroup,
-      [name]: checked,
-    }));
+    try {
+      const res = await axios.post(
+        'http://localhost:4200/runScrapy',
+        JSON.stringify({ keyword1, keyword2 }),
+        { headers: { 'Content-Type': 'application/json' } }
+      );
+      console.log({ keyword1, keyword2 })
+      console.log(res.data);
+      setResults(res.data);
+    } catch (err) {
+      console.log(err);
+    };
   };
 
-  const handleSubmit = async() => {
-    const selectedOptions = {
-      fileTypes,
-      categories,
-    };
-  
-    console.log('Options sélectionnées :', selectedOptions);
-  
-    try {const response = await axios.post('http://127.0.0.1:5000/submit', selectedOptions, {
-      headers: {
-        'Content-Type': 'application/json',
-      } })
-      console.log(response.data)
-        }
-      catch(err) {
-        console.error('Erreur :', err);
-      };
+  const keyword1Input = (e) => {
+    setKeyword1(e.target.value);
+  };
+
+  const keyword2Input = (e) => {
+    setKeyword2(e.target.value);
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="datafont">Types de fichiers :</h2>
-      <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          name="pdf"
-          checked={fileTypes.pdf}
-          onChange={(e) => handleCheckboxChange(e, fileTypes, setFileTypes)}
-        />
-        <label className="form-check-label">PDF</label>
-      </div>
-      <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          name="xls"
-          checked={fileTypes.xls}
-          onChange={(e) => handleCheckboxChange(e, fileTypes, setFileTypes)}
-        />
-        <label className="form-check-label">XLS</label>
-      </div>
-      <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          name="txt"
-          checked={fileTypes.txt}
-          onChange={(e) => handleCheckboxChange(e, fileTypes, setFileTypes)}
-        />
-        <label className="form-check-label">TXT</label>
-      </div>
+    <>
+      <form onSubmit={submitKeywords} className="form-position">
+        <div className="form-group has-success">
+          <label className="form-label mt-1 my-2 label-domain">Entrer le Type du donnée sensible souhaitant chercher</label>
+          <input onChange={keyword1Input} type="text" value={keyword1} className="form-control input-domain" />
+        </div>
 
-      <h2 className="datafont">Catégories :</h2>
-      <div className="form-check"> 
-        <input
-          type="checkbox"
-          className="form-check-input"
-          name="auth"
-          checked={categories.auth}
-          onChange={(e) => handleCheckboxChange(e, categories, setCategories)}
-        />
-        <label className="form-check-label">Données d'authentification</label>
-      </div>
-      <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          name="finance"
-          checked={categories.finance}
-          onChange={(e) => handleCheckboxChange(e, categories, setCategories)}
-        />
-        <label className="form-check-label">Données financières</label>
-      </div>
-      <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="medicalCheckbox"
-          name="medical"
-          checked={categories.medical}
-          onChange={(e) => handleCheckboxChange(e, categories, setCategories)}
-        />
-        <label className="form-check-label">Données médicales</label>
-      </div>
+        <div className="form-group has-success">
+          <label className="form-label mt-1 my-2 label-domain">Entrer le type de fichier</label>
+          <input onChange={keyword2Input} type="text" value={keyword2} className="form-control input-domain" />
+        </div>
 
-      <button className="btn btn-primary" onClick={handleSubmit}>Rechercher</button>
-    </div>
+        <button type="submit" className="btn btn-primary my-2">Submit</button>
+      </form>
+
+      {results && (
+        <div>
+          <h3>Les Résultats:</h3>
+          {/* Affichez les résultats ici */}
+        </div>
+      )}
+    </>
   );
-}
+};
 
-export default SensitiveData;
+export default ScanSensitiveData;

@@ -14,10 +14,10 @@ const ScanDomain =() => {
        const res = await axios.post('http://localhost:4200/nomDomain', JSON.stringify({name: name}), {headers: {'Content-Type': 'application/json'}})
           console.log(res.data)
           setResults(res.data);
-         }
+         } 
         catch(err) {
           console.log(err)
-        };
+        }; 
     
       }
     const domainInput = (e) => {

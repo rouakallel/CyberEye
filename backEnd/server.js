@@ -1,6 +1,14 @@
 const http = require('http');
 const app3 = require('./app3');
+const cors = require('cors');
 
+const corsOptions = {
+  origin: 'http://localhost:3000', 
+  credentials: true, // access-control-allow-credentials: true
+  optionsSuccessStatus: 200
+};
+
+app3.use(cors(corsOptions));
 
 const normalizePort = val => {
 const port = parseInt(val, 10);

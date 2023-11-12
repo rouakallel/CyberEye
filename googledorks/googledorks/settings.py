@@ -1,4 +1,4 @@
-# Scrapy settings for dataleak project
+# Scrapy settings for googledorks project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "dataleak"
+BOT_NAME = "googledorks"
 
-SPIDER_MODULES = ["dataleak.spiders"]
-NEWSPIDER_MODULE = "dataleak.spiders"
+SPIDER_MODULES = ["googledorks.spiders"]
+NEWSPIDER_MODULE = "googledorks.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "dataleak (+http://www.yourdomain.com)"
+#USER_AGENT = "googledorks (+http://www.yourdomain.com)"
+# settings.py
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +48,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "dataleak.middlewares.DataleakSpiderMiddleware": 543,
+#    "googledorks.middlewares.GoogledorksSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "dataleak.middlewares.DataleakDownloaderMiddleware": 543,
+#    "googledorks.middlewares.GoogledorksDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +66,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "dataleak.pipelines.DataleakPipeline": 300,
+#    "googledorks.pipelines.GoogledorksPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -43,6 +43,47 @@
 }
 
 
+/*NavBar*/
+.custom-navbar {
+  height: 40px; 
+}
+.navcolor {
+  background-color: #9acad9;
+  color: #212529;
+  font-family: Roboto, sans-serif;
+}
+.container-fluid {
+  background-color: #9acad9;
+}
+.navbar-collapse {
+  color: #212529;
+  font-family: Roboto, sans-serif;
+  display: flex;
+}
+
+/* Navigation Links Styles */
+.navcolor a {
+  text-decoration: none;
+  color: #304559;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Change link color on hover */
+.navcolor a:hover {
+  background-color: rgba(186, 213, 240, 0.604);
+}
+
+/* Optional: Style for the active link */
+.navcolor a.active {
+  background-color: rgba(33, 37, 41, 0.2);
+}
+
+/* Optional: Add some spacing and border to the navbar */
+.navcolor {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #212529;
+}
 
  
  .pres{
@@ -63,3 +104,95 @@
   font-family: 'Josefin Sans', sans-serif;
   color: #282c34;
  }
+ 
+ .label-domain{
+  color: #21292a;
+  font-family: "Nunito", sans-serif;
+}
+.input-domain{
+  background-color: #02263a;
+  border-color: var(--BORDER-COLOR);
+  opacity: 0.5;
+  width: 50%;
+}
+.form-position{
+  margin-top: 60px;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.table-font{
+  font-family: "Nunito", sans-serif;
+}
+
+.container{
+  font-family: "Nunito", sans-serif;
+ }
+ .card{
+  background-color:#9acad9;
+  border: none;
+ }
+ .card-text{
+  color:#2c3e50 ;
+ }
+ .card-title{
+  font-size: 21px ;
+  font-style: oblique;
+  color: white;
+ }
+ .link{
+  text-decoration: none;
+  color: #dfe4eac0;
+ }
+ .btn-primary{
+ background-color:#29556cc9;
+ border:#0f2937b0;
+ }
+
+ .img-fixed-height {
+  height: 300px;
+}
+
+
+/* Styles pour le tableau */
+.table {
+font-family: 'Josefin Sans', sans-serif;
+width: 100%;
+border-collapse: collapse;
+border: 1px solid #ccc;
+}
+
+.table th, .table td {
+padding: 8px;
+border: 1px solid #ccc;
+}
+
+/* Styles pour les cellules d'en-tête */
+.table th {
+background-color: #002438;
+font-weight: bold;
+text-align: left;
+}
+/* Styles pour les lignes impaires (facultatif) */
+.table tr:nth-child(odd) {
+background-color: #09293A;
+}
+
+/* Styles pour les listes imbriquées (Ports Ouverts) */
+.table ul {
+list-style-type: disc;
+margin: 0;
+padding-left: 20px;
+}
+.table li {
+  display: block;
+}
+
+.titleh4{
+  color: #002438;
+  margin: 40px;
+}
+.mailcomp{
+  color: #002438;
+  margin: 40px;
+}
