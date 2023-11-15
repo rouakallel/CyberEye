@@ -12,7 +12,7 @@ const ScanServiceExpo = () => {
     e.preventDefault()
     try {
      const res = await axios.post('http://localhost:4200/host', JSON.stringify({domain: host}), {headers: {'Content-Type': 'application/json'}})
-        console.log(res.data)
+        console.log(res.data.uniqueCPEArray)
         setResults(res.data);
        }
       catch(err) {
@@ -39,7 +39,7 @@ return (
   
   {results && (
     <div>
-      <h3>Les Résultats du Scan de votre domaine :</h3>
+      <h3 className='titleh4'>Les Résultats du Scan de votre domaine sont :</h3>
       
       <div>
       {results && renderHost(results)}

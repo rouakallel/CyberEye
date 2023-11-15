@@ -55,6 +55,7 @@ const hostSchema = new mongoose.Schema({
   isp: String,
   longitude: Number,
   lastUpdate: Date,
+  vulns: { type: [String], default: [] },
   countryName: String,
   ip_str: { type: String, unique: true },
   os: String,

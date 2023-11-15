@@ -41,6 +41,7 @@ class FilespiderSpider(scrapy.Spider):
                 yield scrapy.Request(url=url, callback=self.parse)
         else:
             for query in kws_list:
+                csv_filename = f'link_list_{query.replace(" ", "_")}.csv'
                 URL = f"https://google.com/search?q={query}&num=99"
                 next_url = URL
                 pages = 0
@@ -61,7 +62,7 @@ class FilespiderSpider(scrapy.Spider):
                             print(links)
 
                         df = pd.DataFrame(list_of_links)
-                        df.to_csv('link_list.csv', mode='a', header=False)
+                        df.to_csv(csv_filename, mode='a', header=False)
 
                         nexto = soup.find('a', class_="nBDE1b G5eFlf")
                         pages += 1

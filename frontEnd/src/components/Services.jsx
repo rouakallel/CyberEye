@@ -50,12 +50,12 @@ const Services = () => {
         <div className="col-md-4">
           <div className="card mb-4 box-shadow  cardhaut">
             <div className="card-title ">  Detection des services exposés</div>
-            <img className="card-img-top img-fixed-height" src="../img/img2.jpg" alt="detectionServiceExpo"/>
+            <img className="card-img-top img-fixed-height" src="../img/img2.jpg" alt="detectionServicesExposés"/>
             <div className="card-body">
               <p className="card-text"> Notre dessein est de surveiller les services exposés afin de prévenir les incidents de sécurité , de minimiser les risques potentiels, les impacts négatifs et garantir un environnement en ligne sûr pour vos utilisateurs et vos données.</p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
-                  <button type="button" className="btn btn-lg btn-primary"><Link to="/detectionServiceExpo" className="link"> Demo</Link></button>
+                  <button type="button" className="btn btn-lg btn-primary"><Link to="/detectionServicesExposés" className="link"> Demo</Link></button>
                   
                 </div>
          
