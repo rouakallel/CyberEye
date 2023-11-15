@@ -14,12 +14,6 @@ CyberEye Modules:
 - Detection of Sensitive Data : Google Dorks 
 
 
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
 
 
 ## Demo
