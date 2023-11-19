@@ -1,8 +1,6 @@
-@import "../node_modules/bootswatch/dist/darkly/bootstrap.min.css" ;
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;1,500&family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
-
 .App {
   text-align: center;
 }
@@ -18,20 +16,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #8bdaf2;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -42,157 +26,261 @@
   }
 }
 
+.navbar{
+  --bs-navbar-padding-y: 0;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
 
-/*NavBar*/
-.custom-navbar {
-  height: 40px; 
+
+h4, .mailcomp {
+  color: #002438;
+  margin: 40px;
 }
-.navcolor {
-  background-color: #9acad9;
-  color: #212529;
-  font-family: Roboto, sans-serif;
+
+/* Couleurs */
+
+
+
+
+
+
+.logo{
+  width:140px;
+  height:80px;
+  padding: 0;
+  margin: 0;
 }
-.container-fluid {
-  background-color: #9acad9;
+
+/* Autres styles */
+.link {
+  text-decoration: none;
+  color: #dfe4eac0;
 }
-.navbar-collapse {
-  color: #212529;
-  font-family: Roboto, sans-serif;
+
+.btn-primary {
+  background-color: #3f4549c9;
+  border: #323537b0;
+}
+
+.img-fixed-height {
+  height: 300px;
+}
+.img-card{
+  height: 300px;
+  width: 300px;
+}
+.title-card{
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  }
+  .card-title{
+    padding-top: 10px;
+  }
+.card{
+  background-color: white;
+  
+  color: black;
+  
+}
+.card :hover{
+  background-color: #b1c6d6;
+}
+.img-size{
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  margin: 10px;;
+ }
+
+.intro{
+ 
+  width: 100%;
+  height: 400px;
+ /* background-color: #002438;*/
+  background-color:#354dcb; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.introtext {
+  justify-content: center;
+  flex: 1;
+  padding: 100px;
+}
+.introtext h1,.introtext h4 {
+ margin: 0;
+}
+.introtext h4 {
+  color: black;
+}
+.introtext h1 {
+ font-weight: bold;
+ color: #bbbbf9;
+}
+
+.imgth {
+  max-width: 100%;
+  height: auto;
+  padding: 80px;
+}
+
+.form-position{
+  background-color:#354dcb;
+  margin-left: 0;
+}
+.form-group{
+  padding-top: 100px;
+  padding-bottom: 20px;
+  width: 400px;
+  align-items: center;
+}
+.form-group, .btn-form{
+  margin-left:400px;
+}
+.btn-form{
+  color: #354dcb;
+  border-radius: 10%;
+  font-weight: 600;
+}
+.form-label{
+  color: white;
+}
+.form-text{
+  color:rgb(162, 160, 160);
+}
+.sizeicon{
+  width: 15px;
+}
+/* EmailResult */
+.emailResult{
+  text-align: center;
+  padding: 20px; 
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* Style du titre h4 */
+.titleh4 {
+  font-size: 20px;
+  color: #333;
+}
+
+
+.mailcomp {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #002438; 
+}
+
+
+.shodanResult{
+  text-align: center;
+  padding: 20px; 
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+/* Style pour le titre des résultats Shodan */
+.shodanResult .titleh4 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style pour le conteneur de chaque élément de résultat Shodan */
+.shodanResult .result {
+  text-align: left;
+}
+
+/* Style pour chaque élément de résultat Shodan */
+.shodanResult .result-item {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Style pour la table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style pour les en-têtes de colonne */
+.table th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style pour les cellules de données */
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Style pour les listes à puces dans les cellules */
+.table ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style pour les éléments de liste à puce dans les cellules */
+.table li {
+  margin-bottom: 5px;
+}
+.domainheader{
+  border-bottom: 1px solid black;
+  color: #002438;
+  font-weight: bold;
+}
+td{
+  margin-right: 20 px;
+}
+
+.table1  tr:not(:last-child) {
+  border-bottom: 1px solid #4e5156;
+}
+.table2 tr:not(:last-child) {
+  border-bottom: 1px solid #4e5156;
+}
+.part1 , .part2{
+  padding-top: 40px;
   display: flex;
 }
 
-/* Navigation Links Styles */
-.navcolor a {
-  text-decoration: none;
-  color: #304559;
-  font-size: 14px;
-  font-weight: 400;
+.table1, .table2 {
+  flex: 1;
+  margin-right: 40px; 
 }
 
-/* Change link color on hover */
-.navcolor a:hover {
-  background-color: rgba(186, 213, 240, 0.604);
+.domainheader {
+  margin-bottom: 10px; 
 }
 
-/* Optional: Style for the active link */
-.navcolor a.active {
-  background-color: rgba(33, 37, 41, 0.2);
-}
-
-/* Optional: Add some spacing and border to the navbar */
-.navcolor {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #212529;
-}
-
- 
- .pres{
-  margin: 60px 0;
-  width: 50%;
-  font-family: 'Josefin Sans', sans-serif;
- }
-
- .input-domain{
-  color:rgba(255, 255, 255, 0.888);
- }
-  
- .albumfont {
-  font-family: 'Josefin Sans', sans-serif;
- }
-
- .datafont {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #282c34;
- }
- 
- .label-domain{
-  color: #21292a;
-  font-family: "Nunito", sans-serif;
-}
-.input-domain{
-  background-color: #02263a;
-  border-color: var(--BORDER-COLOR);
-  opacity: 0.5;
-  width: 50%;
-}
-.form-position{
-  margin-top: 60px;
-  margin-left: 40px;
-  align-items: center;
-  justify-content: center;
-}
-.table-font{
-  font-family: "Nunito", sans-serif;
-}
-
-.container{
-  font-family: "Nunito", sans-serif;
- }
- .card{
-  background-color:#9acad9;
-  border: none;
- }
- .card-text{
-  color:#2c3e50 ;
- }
- .card-title{
-  font-size: 21px ;
-  font-style: oblique;
-  color: white;
- }
- .link{
-  text-decoration: none;
-  color: #dfe4eac0;
- }
- .btn-primary{
- background-color:#29556cc9;
- border:#0f2937b0;
- }
-
- .img-fixed-height {
-  height: 300px;
-}
-
-
-/* Styles pour le tableau */
 .table {
-font-family: 'Josefin Sans', sans-serif;
-width: 100%;
-border-collapse: collapse;
-border: 1px solid #ccc;
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0;
 }
 
-.table th, .table td {
-padding: 8px;
-border: 1px solid #ccc;
-}
 
-/* Styles pour les cellules d'en-tête */
-.table th {
-background-color: #002438;
-font-weight: bold;
-text-align: left;
-}
-/* Styles pour les lignes impaires (facultatif) */
-.table tr:nth-child(odd) {
-background-color: #09293A;
-}
 
-/* Styles pour les listes imbriquées (Ports Ouverts) */
-.table ul {
-list-style-type: disc;
-margin: 0;
-padding-left: 20px;
-}
-.table li {
-  display: block;
-}
-
-.titleh4{
-  color: #002438;
-  margin: 40px;
-}
-.mailcomp{
-  color: #002438;
-  margin: 40px;
+.col {
+  padding: 8px;
 }

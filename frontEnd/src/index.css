@@ -1,4 +1,4 @@
-@import "../node_modules/bootswatch/dist/darkly/bootstrap.min.css" ;
+@import "../node_modules/bootswatch/dist/cosmo/bootstrap.min.css" ;
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;1,500&family=Inter:wght@400;600;700&display=swap');
 :root {
@@ -16,7 +16,7 @@ body::before {
     background-repeat: no-repeat;
     z-index: -1;
     min-height: 100vh;
-    background-color: #f5f8f7 ;
+    background-color: white;
     color: var(--COLOR);
    /* background-image: url("../public/img/img1.jpg");*/
     background-size: cover;
