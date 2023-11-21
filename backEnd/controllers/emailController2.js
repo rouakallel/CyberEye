@@ -14,7 +14,7 @@ exports.emailLeakCheck = async (req, res) => {
     if (!hibpKey) {
       return res.status(500).json({ error: 'HIBP API key not found' });
     }
-
+  
     const response = await axios.get(`https://haveibeenpwned.com/api/v3/breachedaccount/${email}`, {
       headers: {
         'hibp-api-key': hibpKey.value
