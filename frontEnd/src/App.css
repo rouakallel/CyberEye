@@ -59,10 +59,12 @@ h4, .mailcomp {
   color: #dfe4eac0;
 }
 
+
 .btn-primary {
   background-color: #3f4549c9;
   border: #323537b0;
 }
+
 
 .img-fixed-height {
   height: 300px;
@@ -86,7 +88,7 @@ h4, .mailcomp {
   
 }
 .card :hover{
-  background-color: #b1c6d6;
+  background-color: #354dcb;
 }
 .img-size{
   height: 60px;
@@ -283,4 +285,57 @@ td{
 
 .col {
   padding: 8px;
+}
+/* Add this CSS in a separate file, for example, ContactUs.css */
+
+/* Personalized class names to avoid conflicts */
+.contact-us-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 200px  400px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 600px;
+}
+
+.contact-us-title {
+  color: #333;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us-label {
+  
+  margin: 20px 0;
+  color: #555;
+}
+
+.contact-us-input{
+  margin-left: 20px ;
+}
+.contact-us-input,
+.contact-us-textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-us-button {
+  background-color: #354dcb;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-us-button:hover {
+  background-color: grey ;
 }

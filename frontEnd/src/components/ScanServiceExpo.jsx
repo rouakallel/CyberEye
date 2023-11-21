@@ -1,15 +1,23 @@
-import React from 'react';
+
 import { useState } from "react"
 import axios from 'axios'
 import renderHost from './HostRender';
-
+import validator from 'validator'
 const ScanServiceExpo = () => {
 
   const [host,setHost] = useState("")
   const [results, setResults] = useState(null);
+  const [domainError, setDomainError] = useState(null);
  
   const submitHost = async(e) => {
     e.preventDefault()
+    if (!validator.isFQDN(host)) {
+      setDomainError("Veuillez entrer un domaine valide.");
+      return;
+    } else {
+      setDomainError(null);
+    }
+
     try {
      const res = await axios.post('http://localhost:4200/host', JSON.stringify({domain: host}), {headers: {'Content-Type': 'application/json'}})
         console.log(res.data.uniqueCPEArray)
@@ -22,6 +30,7 @@ const ScanServiceExpo = () => {
     }
   const hostInput = (e) => {
       setHost(e.target.value)
+      setDomainError(null)
     }
 return (
   <>
@@ -36,10 +45,14 @@ return (
 
   </form>
   
-  
-  {results && (
+  {domainError ?  (
+    <div className="error-message shodanResult ">
+      {domainError}
+    </div>
+  ):
+  results &&  (
     <div className='shodanResult'>
-      <h3 className='titleh4'>Les Résultats du Scan de votre domaine sont :</h3>
+      <h3 className='titleh4'>The Scan Results of your domain are:</h3>
       
       <div className='result'>
       {results && renderHost(results)}

@@ -8,6 +8,7 @@ const renderHost = (data) => {
     <div className="table1">
     <h2 className="domainheader"> Owner Details</h2>
     <table className=" table-borderless"> 
+    <tbody>
       <tr className=" row">
         <td className="col"> Domain</td>
         <td className="col">{data.domains[0]}</td>
@@ -16,11 +17,14 @@ const renderHost = (data) => {
       <td className="col">Adresse IP</td>
       <td className="col">{data.ip_str}</td>
     </tr>
+    </tbody>
     </table>
+    
     </div>
     <div className="table2">
     <h2 className="domainheader"> Localisation Details</h2>
     <table className=" table-borderless"> 
+    <tbody>
       <tr className="row ">
         <td className="col"> Country Code </td>
         <td className="col">{data.country_code}</td>
@@ -29,6 +33,7 @@ const renderHost = (data) => {
       <td className="col"> Organization</td>
       <td className="col">{data.org}</td>
     </tr>
+    </tbody>
     </table>
     </div>
     </div>
@@ -37,6 +42,7 @@ const renderHost = (data) => {
     <div className="table2">
     <h2 className="domainheader"> Other Details</h2>
     <table className=" table-borderless"> 
+    <tbody>
       <tr className="row ">
         <td className="col"> Ports ouverts</td>
         <td className="col">
@@ -59,6 +65,7 @@ const renderHost = (data) => {
         <p>No CPE data available</p>
       )}</td>
     </tr>
+    </tbody>
     </table>
     </div>
     </div>

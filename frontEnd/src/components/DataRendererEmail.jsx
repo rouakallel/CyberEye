@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 const DataRendererEmail = ({ hibpResult }) => {
   if (!hibpResult || hibpResult.length === 0) {
     return <p>Aucun résultat disponible pour cet e-mail.</p>;

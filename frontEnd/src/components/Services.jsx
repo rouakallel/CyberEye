@@ -26,11 +26,10 @@ const Services = () => {
               <p className="card-text">Our mission is to proactively identify and safeguard vulnerable email addresses, mitigating the risks associated with identity theft, fraud, and malicious exploitation. By leveraging advanced threat intelligence, we aim to provide robust security measures that actively protect against potential threats, ensuring a secure digital environment. </p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
-                  <button type="button" className="btn btn-lg btn-primary
-                  "> <Link to="/detectionMail" className="link" > Demo</Link> </button>
-                 
-                </div>
-                
+                  <button type="button" className="btn btn-lg btn-primary 
+                  "> <Link to="/detectionMail" className="link" > Demo</Link> </button> 
+                </div> 
+              
               </div>
             </div>
           </div>

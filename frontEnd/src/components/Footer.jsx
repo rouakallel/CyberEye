@@ -1,4 +1,4 @@
-import React from 'react';
+
 const Footer = () => (
   <footer >
    <div className="container-fluid text-center fixed-bottom ">
