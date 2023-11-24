@@ -12,7 +12,7 @@ const ScanEmail = () => {
     e.preventDefault()
     if (!validator.isEmail(adresseEmail)) {
       console.error('Adresse e-mail non valide');
-      setEmailError('Adresse e-mail non valide');
+      setEmailError('Email address Invalid');
       return;
     }
     try {
@@ -50,7 +50,7 @@ return (
   results && (
     <div className='emailResult'>
     <h4 className='titleh4'>Is your email compromised as a result of a data breach:</h4>
-    <div className='mailcomp'>{results.isLeaked ? 'Yes' : 'No'}</div>
+    <div className={`mailcomp ${results.isLeaked ? 'red-text' : 'green-text'}`}>{results.isLeaked ? 'Yes' : 'No'}</div>
     {results.isLeaked && (
       <div className='mailcomp'>
         <DataRendererEmail hibpResult={results.hibpResult} />

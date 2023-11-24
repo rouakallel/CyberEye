@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import DataRenderSensitive from './DataRenderSensitive';
 
 const ScanSensitiveData = () => {
   const [keyword1, setKeyword1] = useState("");
@@ -11,15 +12,16 @@ const ScanSensitiveData = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:4200/runScrapy',
+        'http://localhost:4200/submit',
         JSON.stringify({ keyword1, keyword2 }),
         { headers: { 'Content-Type': 'application/json' } }
       );
       console.log({ keyword1, keyword2 })
       console.log(res.data);
-      setResults(res.data);
+      setResults(res.data.results);
     } catch (err) {
       console.log(err);
+      console.log('the submission is failed')
     };
   };
 
@@ -35,24 +37,21 @@ const ScanSensitiveData = () => {
     <>
       <form onSubmit={submitKeywords} className="form-position">
         <div className="form-group has-success">
-          <label className="form-label mt-1 my-2 label-domain">Entrer le Type du donnée sensible souhaitant chercher</label>
-          <input onChange={keyword1Input} type="text" value={keyword1} className="form-control input-domain" />
+          <label htmlFor="keyword1" className="form-label mt-1 my-2 label-domain">Enter the Type of sensitive data you want to search</label>
+          <input id="keyword1" onChange={keyword1Input} type="text" value={keyword1} className="form-control input-domain" />
         </div>
 
-        <div className="form-group has-success">
-          <label className="form-label mt-1 my-2 label-domain">Entrer le type de fichier</label>
-          <input onChange={keyword2Input} type="text" value={keyword2} className="form-control input-domain" />
+        <div className="form-group has-success form-group-2">
+          <label htmlFor="keyword2" className="form-label mt-1 my-2 label-domain">Enter the file type </label>
+          <input id="keyword2" onChange={keyword2Input} type="text" value={keyword2} className="form-control input-domain" />
         </div>
 
-        <button type="submit" className="btn btn-primary my-2">Submit</button>
+        <button type="submit" className="btn btn-light my-2 btn-form">Submit</button>
       </form>
 
-      {results && (
-        <div>
-          <h3>Les Résultats:</h3>
-          {/* Affichez les résultats ici */}
-        </div>
-      )}
+   
+      {results && <DataRenderSensitive results={results} />}
+      
     </>
   );
 };

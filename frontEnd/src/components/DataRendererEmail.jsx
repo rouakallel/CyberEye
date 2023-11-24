@@ -8,10 +8,10 @@ const DataRendererEmail = ({ hibpResult }) => {
   return (
     <div>
       <h4>You are breached in these accounts:</h4>
-      <ul>
+      <ul className="listundoted">
         {hibpResult.map((item, index) => (
-          <li key={index}>
-            <strong>{item.Name}</strong> - {item.Description}
+          <li className="undoted-item" key={index}>
+            <strong>{item.Name}</strong> {item.Description}
           </li>
         ))}
       </ul>

@@ -7,7 +7,7 @@
     "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd ../frontend && npm start",
-    "flask": " cd ../FlaskServer &&  venv\\Scripts\\activate run",
+    "flask": " cd ../FlaskServer &&  venv\\Scripts\\activate && python app.py ",
     "dev": "concurrently \" npm run server \"  \" npm run client \" \"npm run flask\""
   },
   "keywords": [],

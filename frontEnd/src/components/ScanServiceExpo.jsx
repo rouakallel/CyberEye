@@ -8,15 +8,15 @@ const ScanServiceExpo = () => {
   const [host,setHost] = useState("")
   const [results, setResults] = useState(null);
   const [domainError, setDomainError] = useState(null);
- 
+  
   const submitHost = async(e) => {
     e.preventDefault()
     if (!validator.isFQDN(host)) {
-      setDomainError("Veuillez entrer un domaine valide.");
+      setDomainError("Please enter a valid domain");
       return;
     } else {
       setDomainError(null);
-    }
+    } 
 
     try {
      const res = await axios.post('http://localhost:4200/host', JSON.stringify({domain: host}), {headers: {'Content-Type': 'application/json'}})

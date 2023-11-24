@@ -4,6 +4,7 @@ const domainRoutes=require('./routes/domainRoutes')
 const hostRoutes = require('./routes/hostRoutes');
 const emailRoutes = require('./routes/emailRoutes')
 const sensitiveDataRoutes = require('./routes/sensitiveDataRoutes')
+const contactRoute = require('./routes/contactRoute')
 
 
 const app3 = express();
@@ -28,16 +29,12 @@ app3.use(express.json());
 app3.use('/nomDomain', domainRoutes); 
 app3.use('/host', hostRoutes);
 app3.use('/adresseEmail',emailRoutes)
-app3.use('/runScrapy',sensitiveDataRoutes)
+app3.use('/submit',sensitiveDataRoutes)
+app3.use('/sendEmail',contactRoute)
 
 
-// app3.set('view engine', 'ejs');
-// app3.set('views', './views');
-// app3.get('/results', (req,res) => { 
-  
-//  res.render('resultats')
 
-// })
+
 
 
 
