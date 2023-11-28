@@ -40,14 +40,14 @@ const Services = () => {
         <div className="col-md-4">
           <div className="card mb-4 shadow cardhaut">
           <div className='title-card'>
-            <img className="card-img-top img-card" src="../img/detect4.jpg" alt="sensitiveData"/>
+            <img className="card-img-top img-card" src="../img/detect4.jpg" alt="sensitiveTemplate"/>
             <div className="card-title ">Sensitive data detection</div>
             </div>
             <div className="card-body">
               <p className="card-text"> Our primary goal is to proactively identify and safeguard sensitive information, encompassing credentials, confidential documents, and other strategic data. By doing so, we aim to thwart any unauthorized access, prevent potential leaks, and mitigate the risks of malicious exploitation, ensuring the secure use of data. </p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
-                  <button type="button" className="btn btn-lg btn-primary"><Link to="/sensitiveData" className="link"> Demo</Link></button>
+                  <button type="button" className="btn btn-lg btn-primary"><Link to="/sensitiveTemplate" className="link"> Demo</Link></button>
                   
                 </div>
                

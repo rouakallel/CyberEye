@@ -16,7 +16,11 @@ import SignUp from "./components/SignUp";
 import ScanDomain from "./components/ScanDomain";
 import ScanEmail from "./components/ScanEmail";
 import ScanServiceExpo from "./components/ScanServiceExpo";
+import SensitiveTemplate from "./components/SensitiveTemplate";
+import SensitiveFiles from "./components/SensitiveFiles"
+import ResultsPageFiles from "./components/ResultsPageFiles";
 import SensitiveData from "./components/SensitiveData";
+import SensitiveCode  from "./components/SensitiveCode";
 function App() {
   return (
     <>
@@ -53,12 +57,31 @@ function App() {
             <Route index element={<ScanServiceExpo />} />
             </Route>
 
+          
+
+            <Route path="sensitiveTemplate">
+            <Route index element={<SensitiveTemplate />} />
+            </Route>
+
+            <Route path="sensitiveFiles">
+            <Route index element={<SensitiveFiles />} />
+            </Route>
+
+            <Route path="ResultsPageFiles">
+            <Route index element={<ResultsPageFiles />} />
+            </Route>
+
             <Route path="sensitiveData">
             <Route index element={<SensitiveData />} />
             </Route>
+   
+            <Route path="sensitiveCode">
+            <Route index element={<SensitiveCode />} />
+            </Route>
+
 
             <Route path="login">
-              <Route index element={<Login />} />
+            <Route index element={<Login />} />
             </Route>
             {/* CATCH ALL */}
             <Route path="*" element={<Navigate to={"/"} replace />} />

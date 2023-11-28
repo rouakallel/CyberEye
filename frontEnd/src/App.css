@@ -133,6 +133,11 @@ h4, .mailcomp {
 .form-position{
   background-color:#354dcb;
   margin-left: 0;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
 }
 .form-group{
   padding-top: 100px;
@@ -141,7 +146,7 @@ h4, .mailcomp {
   align-items: center;
 }
 .form-group, .btn-form{
-  margin-left:400px;
+  margin-left: 0px;
 }
 .btn-form{
   color: #354dcb;
@@ -448,4 +453,62 @@ color: #4e5156;
   height: auto;
   margin: 0 auto;
   margin-top: 40px;
+}
+
+.template-sensitive{
+  background-color: #354dcb;
+  width: auto;
+  height: 800px;
+  color: black;
+  display: flex;
+}
+.container-sensitive{
+  margin-left: 200px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  width: 470px;
+  height: 470px;
+  margin-top: 100px;
+  align-self: center;
+}
+.button-sensitive {
+  border-radius: 50%; 
+  margin: 20px 0; 
+  width: 120px;
+  height: 120px;
+  background-color: #eeeef6;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-size{
+  width: 60%;
+  height: 60%;
+  color: #354dcb;
+}
+
+.button1 { grid-column: 1; grid-row: 1;  justify-self: center;}
+.button2 { grid-column: 2; grid-row: 2;  justify-self: center;}
+.button3 { grid-column: 3; grid-row: 3;  justify-self: center;}
+.results-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+  margin-bottom: 10px;
+}
+
+/* Styles for File Type Counts Chart */
+.chart-container {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  justify-content: center;
+
 }

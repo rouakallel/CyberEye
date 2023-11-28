@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 
-const SensitiveData = () => {
+const SensitiveCode = () => {
   const [keyword1, setKeyword1] = useState("");
   const [results, setResults] = useState(null);
 
@@ -34,7 +34,7 @@ const SensitiveData = () => {
     <>
       <form onSubmit={submitKeywords} className="form-position">
         <div className="form-group has-success">
-          <label htmlFor="keyword1" className="form-label mt-1 my-2 label-domain">Enter the Type of sensitive data you want to search</label>
+          <label htmlFor="keyword1" className="form-label mt-1 my-2 label-domain">Enter the extention of the code to search</label>
           <input id="keyword1" onChange={keyword1Input} type="text" value={keyword1} className="form-control input-domain" />
         </div>
         <button type="submit" className="btn btn-light my-2 btn-form">Submit</button>
@@ -47,4 +47,4 @@ const SensitiveData = () => {
   );
 };
 
-export default SensitiveData;
+export default SensitiveCode ;
