@@ -64,7 +64,19 @@ const renderHost = (data) => {
       ) : (
         <p>No CPE data available</p>
       )}</td>
+    
+      <td className="col"> CVE</td>
+      <td className="col">{ data.vulns ? (
+        <ul>
+          {data.vulns.map((cve, index) => (
+            <li className="lilong" key={index}>{cve}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>No CVE data available</p>
+      )}</td>
     </tr>
+    
     </tbody>
     </table>
     </div>

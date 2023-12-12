@@ -28,6 +28,7 @@
 
 .navbar{
   --bs-navbar-padding-y: 0;
+  border-bottom: 1px  solid rgb(185, 185, 189);
 }
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -137,7 +138,7 @@ h4, .mailcomp {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 100px;
 }
 .form-group{
   padding-top: 100px;
@@ -219,13 +220,11 @@ h4, .mailcomp {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 40px;
-}
-/* Style pour le titre des résultats Shodan */
-.shodanResult {
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
+
 
 /* Style pour le conteneur de chaque élément de résultat Shodan */
 .shodanResult .result {
@@ -385,7 +384,7 @@ color: #4e5156;
   font-size: 16px;
 }
 
-.contact-us-button {
+.contact-us-button{
   background-color: #354dcb;
   color: #fff;
   padding: 10px ;
@@ -455,43 +454,51 @@ color: #4e5156;
   margin-top: 40px;
 }
 
-.template-sensitive{
-  background-color: #354dcb;
+
+.container-sensitive{ 
   width: auto;
-  height: 800px;
-  color: black;
-  display: flex;
-}
-.container-sensitive{
-  margin-left: 200px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  width: 470px;
-  height: 470px;
+  height: 600px;
   margin-top: 100px;
-  align-self: center;
-}
-.button-sensitive {
-  border-radius: 50%; 
-  margin: 20px 0; 
-  width: 120px;
-  height: 120px;
-  background-color: #eeeef6;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  padding: 20px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
 }
+@media screen and (max-width: 700px) {
+  .container-sensitive {
+    flex-direction: column;
+  }}
+
 .icon-size{
-  width: 60%;
-  height: 60%;
-  color: #354dcb;
+  color: #ffffff;
+  padding-left: 20px;
+}
+.sensitive-div{
+  width: 600px;
+  height: 200px;
+  border: 1px solid rgb(229, 229, 229);
+  box-shadow: 0 12px 10px 0 rgba(173, 172, 172, 0.24),0 17px 20px 0 rgba(151, 151, 151, 0.19);
+  margin:30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color:  #3a4bc7 ;
+  color: white;
 }
 
-.button1 { grid-column: 1; grid-row: 1;  justify-self: center;}
-.button2 { grid-column: 2; grid-row: 2;  justify-self: center;}
-.button3 { grid-column: 3; grid-row: 3;  justify-self: center;}
+.senstive-img{
+  height: 100px;
+  width: 100px;
+}
+.sensitive-pr{
+  font-size: small;
+}
+ 
 .results-container {
   margin-top: 20px;
   padding: 10px;
@@ -507,8 +514,85 @@ color: #4e5156;
 /* Styles for File Type Counts Chart */
 .chart-container {
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.no-result {
+  margin: auto;
+  font-size: xx-large;
+  color: #ff0000; /* Changer la couleur du texte en rouge (par exemple) pour le mettre en évidence */
+}
+
+.detailed-result-button {
+  background-color: #354dcb;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px; /* Ajouter un espace en haut */
+  height: 50px;
+  width: 200px;
+  transition: background-color 0.3s, color 0.3s; /* Ajouter une transition pour une animation plus fluide */
+}
+
+.detailed-result-button:hover {
+  background-color: #35363c;
+}
+.fileResult{
+  text-align: center;
+  padding: 20px; 
+  background-color: #eae9e9;
+ 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.loader{
+ 
+    display: block;
+    margin: 0 auto;
+    border-color: rgb(200, 0, 255);
+    
+}
+
+.title-result{
+  color:#eb8207 ;
+  font-weight: bolder;
+  font-size: 300;
+  margin-bottom: 30px;
+}
+
+.file-link{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.icon-file{
+  color: orange;
+  padding-left: 20px;
+}
+
+.icon-file :hover{
+  color: blue;
+  padding-left: 20px;
+}
+.list-result-sensitive{
+  list-style-type: none;
+}
+.lilong{
+  width: 400px;
 }

@@ -11,7 +11,7 @@ const SensitiveData = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:4200/submit',
+        'http://localhost:4200/submit2',
         JSON.stringify({ keyword1 }),
         { headers: { 'Content-Type': 'application/json' } }
       );

@@ -11,7 +11,7 @@ const SensitiveCode = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:4200/submit',
+        'http://localhost:4200/submit3',
         JSON.stringify({ keyword1 }),
         { headers: { 'Content-Type': 'application/json' } }
       );

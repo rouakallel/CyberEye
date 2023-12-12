@@ -3,7 +3,7 @@ const express = require('express');
 const domainRoutes=require('./routes/domainRoutes')
 const hostRoutes = require('./routes/hostRoutes');
 const emailRoutes = require('./routes/emailRoutes')
-const sensitiveDataRoutes = require('./routes/sensitiveDataRoutes')
+const sensitiveFileRoutes = require('./routes/sensitiveFileRoutes')
 const contactRoute = require('./routes/contactRoute')
 
 
@@ -29,7 +29,7 @@ app3.use(express.json());
 app3.use('/nomDomain', domainRoutes); 
 app3.use('/host', hostRoutes);
 app3.use('/adresseEmail',emailRoutes)
-app3.use('/submit',sensitiveDataRoutes)
+app3.use('/submit',sensitiveFileRoutes)
 app3.use('/sendEmail',contactRoute)
 
 

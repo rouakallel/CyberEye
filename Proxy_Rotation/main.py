@@ -3,7 +3,7 @@ import requests
 with open ("valid_proxies.txt","r") as f:
     proxies = f.read().split("\n")
 
-sites_to_check = ["https://google.com"]
+sites_to_check = ["https://google.com","https://google.com"]
 
 counter = 0
 
@@ -19,3 +19,4 @@ for site in sites_to_check:
     finally: 
         counter += 1      
         counter % len(proxies)
+        

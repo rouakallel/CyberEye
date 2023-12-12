@@ -13,7 +13,7 @@ const FileTypeChart = ({ fileCounts }) => {
    const data = Object.entries(normalizedFileCounts).map(([fileType, count]) => ({ fileType, count }));
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF', '#FF6633', '#33CC33', '#6666FF', '#FF3333'];
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={600} height={400}>
       <Pie
         dataKey="count"
         isAnimationActive={true}
@@ -33,7 +33,7 @@ const FileTypeChart = ({ fileCounts }) => {
         value: entry.fileType, // Utilisez le nom de l'extension comme valeur
         type: 'circle',
         color: COLORS[index % COLORS.length],
-      }))} />
+      }))} /> 
     </PieChart>
   );
 };

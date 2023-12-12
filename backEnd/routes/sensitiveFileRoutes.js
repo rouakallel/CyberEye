@@ -6,12 +6,12 @@ const axios = require('axios'); // Add this line for making HTTP requests
 router.use(bodyParser.json());
 
 router.post('/', async (req, res) => {
-  const { keyword1, keyword2 } = req.body;
+  const { keyword} = req.body;
   
   try {
     // Send a POST request to your Flask API
     const flaskApiUrl = 'http://127.0.0.1:5000/submit';
-    const flaskApiResponse = await axios.post(flaskApiUrl, { keyword1, keyword2 });
+    const flaskApiResponse = await axios.post(flaskApiUrl, { keyword });
     
     // Log the response from the Flask API
     console.log('Flask API Response:', flaskApiResponse.data);

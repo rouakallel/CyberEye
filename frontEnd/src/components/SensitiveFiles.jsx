@@ -5,10 +5,11 @@ import FileTypeChart from './FileTypeChart';
 
 
 const SensitiveFiles = () => {
-  const [keyword1, setKeyword1] = useState("");
-  const [keyword2, setKeyword2] = useState("");
+  const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
-  const[filetypes,setFiletypes]=useState(null)
+  const[filetypes,setFiletypes]=useState(null);
+  const[filecount,setFilecount]=useState();
+
   const navigate = useNavigate()
   const submitKeywords = async (e) => {
     e.preventDefault();
@@ -16,14 +17,14 @@ const SensitiveFiles = () => {
     try {
       const res = await axios.post(
         'http://localhost:4200/submit',
-        JSON.stringify({ keyword1, keyword2 }),
+        JSON.stringify({ keyword }),
         { headers: { 'Content-Type': 'application/json' } }
       );
-      console.log({ keyword1, keyword2 })
+      console.log({ keyword })
       console.log(res.data);
       setResults(res.data.results);
       setFiletypes(res.data.file_type_counts)
-
+      setFilecount(res.data.result_count)
     
     
     } catch (err) {
@@ -35,38 +36,40 @@ const SensitiveFiles = () => {
   const handleClick = () => {
       navigate('/ResultsPageFiles',{state:{results}}) }
     
-  const keyword1Input = (e) => {
-    setKeyword1(e.target.value);
+  const keywordInput = (e) => {
+    setKeyword(e.target.value);
   };
 
-  const keyword2Input = (e) => {
-    setKeyword2(e.target.value);
-  };
+  
 
   return (
     <>
       <form onSubmit={submitKeywords} className="form-position">
         <div className="form-group has-success">
-          <label htmlFor="keyword1" className="form-label mt-1 my-2 label-domain">Enter the Type of sensitive data you want to search</label>
-          <input id="keyword1" onChange={keyword1Input} type="text" value={keyword1} className="form-control input-domain" />
+          <label htmlFor="keyword1" className="form-label mt-1 my-2 label-domain">Enter the keyword you want to search </label>
+          <input id="keyword1" onChange={keywordInput} type="text" value={keyword} className="form-control input-domain" />
         </div>
 
-        <div className="form-group has-success form-group-2">
-          <label htmlFor="keyword2" className="form-label mt-1 my-2 label-domain">Enter the file type </label>
-          <input id="keyword2" onChange={keyword2Input} type="text" value={keyword2} className="form-control input-domain" />
-        </div>
+  
 
         <button type="submit" className="btn btn-light my-2 btn-form">Submit</button>
       </form>
 
    
-      {results && /*<DataRenderSensitive className="results-container" results={results}/> && */
-      <div className="chart-container" >
-      <h1 className='chart-title'>File Type Counts Chart</h1>
-      <FileTypeChart  fileCounts={filetypes} />
-     
-      <button className="btn contact-us-button" onClick={handleClick}>Detailed Results</button>
-      </div>}
+      {results && (filecount === 0 ? (
+        <div className='shodanResult'>
+        <p className='no-result'>No result for the keyword: {keyword}</p>
+        </div>
+      ) : (
+        <div className='fileResult'>
+        <div className="chart-container">
+          <h4 className='titleh4'> The Diagram of exposed files containing the keyword {keyword}</h4>
+          <FileTypeChart fileCounts={filetypes} />
+          <button className="btn detailed-result-button" onClick={handleClick}>Detailed Results</button>
+        </div>
+        </div>
+      ))}
+      
       
     </>
   );

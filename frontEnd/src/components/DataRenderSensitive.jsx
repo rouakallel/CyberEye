@@ -1,3 +1,7 @@
+import  { faFileExport} from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+
 
 
 const DataRenderSensitive = ({results}) => {
@@ -6,7 +10,7 @@ const DataRenderSensitive = ({results}) => {
       }  
   return (
     <div className='sensitive-data-result'>
-    <h3 >The Results</h3>
+    <h3 className="title-result">The Results</h3>
     <ul className="list-result-sensitive">
     {results.map((result,index) => {
         const resultArray = result.split(';');
@@ -15,10 +19,12 @@ const DataRenderSensitive = ({results}) => {
             const link = resultArray[1];
             const description = resultArray[2];
           return(     
-      <li key={index}> 
+      <li  key={index}> 
       <strong>{title}</strong>
-      <p>{description}</p>
-      <a href={link} target="_blank" rel="noopener noreferrer">View file</a>
+      <p display='none'> {description}</p>
+      <div  className="file-link"> View file
+      <a  href={link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="icon-file" icon={faFileExport} /></a> 
+      </div>
       </li>)}
       return null
     })}

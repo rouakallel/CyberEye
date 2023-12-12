@@ -41,6 +41,7 @@ const checkHost = async (req, res) => {
         org: data.org,
         ports: data.ports,
         uniqueCPEArray: [...new Set(flatArray)],
+        vulns: data.vulns,
       };
       
       return res.json(responseData);
